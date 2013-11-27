@@ -59,6 +59,9 @@ def handle_date(out_path, date, files, fps, camera):
 
     subprocess.check_output(args)
 
+    for f in files:
+        os.unlink(f)
+
 if __name__ == '__main__':
     def check_dir(d):
         if not os.path.exists(d):

@@ -54,6 +54,7 @@ def handle_date(out_path, date, files, fps, camera):
            , '-oac', 'copy'
            , '-of', 'avi'
            , '-o', os.path.join(out_path, '{}.avi'.format(date))
+           , '-really-quiet'
            )
 
     subprocess.check_output(args)
